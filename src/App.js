@@ -6,7 +6,7 @@ import usePan from './hooks/usePan';
 import {useScale} from './hooks/useScale';
 import map from './images/map.svg';
 import { useRef  } from "react";
-
+import Canvas from './components/Canvas';
 function App() {
   const ref = useRef<HTMLDivElement | null>(null)
   const scale = useScale(ref)
@@ -17,6 +17,7 @@ function App() {
       <UseScale />
       <h1>Test Scale</h1>
       <UseScaleExample/> */}
+      {/* <Canvas/> */}
       <canvas
             onMouseDown={startPan}
             className = "test-scale"

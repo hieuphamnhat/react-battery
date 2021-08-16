@@ -23,11 +23,11 @@ export const useScale = () => {
         let scale: number
         //currentScale += e.deltaY / 7 * -0.01;
         if(e.deltaY < 0)
-            currentScale += 0.2;
+            currentScale += 0.5;
         if(e.deltaY > 0)
-            currentScale += -0.2;
+            currentScale += -0.5;
         // console.log(currentScale)
-        scale = Math.min(Math.max(.125, currentScale), 6);
+        scale = Math.min(Math.max(.125, currentScale), 20);
         if (scale <= MIN_SCALE){
             scale = MIN_SCALE;
         }
